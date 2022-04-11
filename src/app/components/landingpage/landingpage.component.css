@@ -1,0 +1,52 @@
+.ContainerLandingpage{
+    position: absolute;
+    width: 100%;
+    height: 91.5vh;
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ContainerLandingpage .Landingpage{
+    width: 50%;
+    height: max-content;
+    margin-top: 150px;
+    margin-left: 25%;
+    margin-right: 25%;
+    background: rgba(48, 220, 255, 0.2);
+    box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.1);
+    border-radius: 20px;
+    border: 1px rgba(255,255,255,0.5) solid;
+    padding: 5px;
+}
+
+.ContainerLandingpage .Landingpage .Message{
+    background: none;
+    text-align: center;
+    text-shadow: 1px 2px 3px rgba(0,0,0,0.3);
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+button{
+    margin-top: 50px;
+    height: 30px;
+    width: 100px;
+    background: none;
+    border: 2px #001b48 solid;
+    border-radius: 5px;
+    color: #001b48;
+    transition: 0.3s;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    cursor: pointer;
+}
+
+button:hover{
+    border: 2px #d6e8ee solid;
+    color: #d6e8ee;
+    transition: 0.3s;
+}
