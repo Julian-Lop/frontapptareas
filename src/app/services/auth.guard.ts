@@ -10,13 +10,15 @@ export class AuthGuard implements CanActivate {
   
   respuesta:any = []
 
+  
+
   constructor(private auth: AuthService, private router:Router){
 
   }
 
- async canActivate(){ 
+  async canActivate(){ 
     let temp = await this.auth.hasSession()
-    if(!temp)this.router.navigate(['/']) 
+    if(!temp)this.router.navigate(['/'])
     return temp
   }
 }

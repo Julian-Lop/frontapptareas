@@ -12,8 +12,8 @@ export class TareasService {
 
   constructor(private http:HttpClient) { }
 
-  getTareas():Observable<any>{
-    return this.http.get<any>(`${environment.url}obtenerTareas/1`)
+  getTareas(id:number):Observable<any>{
+    return this.http.get<any>(`${environment.url}obtenerTareas/${id}`)
   }
 
 }

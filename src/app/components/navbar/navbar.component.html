@@ -1,4 +1,5 @@
 <div class="Navbar">
-    <a routerLink="/signin" ><button>Ingresar</button></a>
-    <a routerLink="/register"><button>Registrarse</button></a>
+    <a routerLink="/signin" *ngIf="!sesion"><button>Ingresar</button></a>
+    <a routerLink="/register" *ngIf="!sesion"><button>Registrarse</button></a>
+    <button (click)="signOut()" *ngIf="sesion">Salir</button>
 <div>

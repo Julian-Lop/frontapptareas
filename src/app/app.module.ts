@@ -8,7 +8,12 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { HttpClientModule } from '@angular/common/http';
 import { RegisterComponent } from './components/register/register.component';
 import { FormsModule } from '@angular/forms';
-import { SignupComponent } from './components/signup/signup.component';
+import { SigninComponent } from './components/signin/signin.component';
+import { TasksComponent } from './privateRoutes/components/tasks/tasks.component';
+import { DropdownComponent } from './privateRoutes/components/dropdown/dropdown.component';
+import { CompleteTasksComponent } from './privateRoutes/components/complete-tasks/complete-tasks.component';
+import { TaskComponent } from './privateRoutes/components/task/task.component';
+import { AddTaskComponent } from './privateRoutes/components/add-task/add-task.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +21,12 @@ import { SignupComponent } from './components/signup/signup.component';
     LandingpageComponent,
     NavbarComponent,
     RegisterComponent,
-    SignupComponent
+    SigninComponent,
+    TasksComponent,
+    DropdownComponent,
+    CompleteTasksComponent,
+    TaskComponent,
+    AddTaskComponent
   ],
   imports: [
     BrowserModule,
