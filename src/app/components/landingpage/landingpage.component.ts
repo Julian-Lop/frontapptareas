@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TareasService } from 'src/app/services/tareas.service';
 
 @Component({
   selector: 'app-landingpage',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LandingpageComponent implements OnInit {
 
-  constructor() { }
+  tareas : any = []
+  constructor(private tasks:TareasService) { }
 
   ngOnInit(): void {
+    this.tasks.getTareas().subscribe(res => this.tareas.push(res))
   }
+
+
 
 }
