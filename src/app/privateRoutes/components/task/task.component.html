@@ -1,0 +1,14 @@
+<div class="Task">
+    <button>X</button>
+    <br><br>
+    <h3>{{currentTask.Titulo}}</h3>
+    <br>
+    <p>{{currentTask.Descripcion}}</p>
+    <br>
+    <p>{{currentTask.Estado.Nombre.includes('Proceso') ? 'En '+currentTask.Estado.Nombre : currentTask.Estado.Nombre}}</p>
+    <br>
+    <p>Fecha de inicio: {{currentTask.FechaIni}}</p>
+    <br>
+    <p>Fecha finalización: {{currentTask.FechaFin}}</p>
+    <br>
+</div>

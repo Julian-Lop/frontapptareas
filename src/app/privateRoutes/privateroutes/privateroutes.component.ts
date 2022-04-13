@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-privateroutes',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PrivateroutesComponent implements OnInit {
 
-  constructor() { }
+  currentLink:string = ''
+
+  constructor(private router:Router) { }
 
   ngOnInit(): void {
+    
+  }
+
+  clickLink(link:string){
+    this.currentLink = link
+    console.log(this.currentLink)
   }
 
 }

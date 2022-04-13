@@ -1,1 +1,7 @@
-<p>privateroutes works!</p>
+<div class="ContainerTasksRoutes">
+    <div class="NavbarTasks">
+        <a routerLink="tasks" (click)="clickLink('tasks')" [ngClass]="currentLink.includes('tasks') ? 'Selected' : 'NotSelected' ">Tareas en procceso</a>
+        <a routerLink="completeTasks" (click)="clickLink('completeTasks')" [ngClass]="currentLink.includes('completeTasks') ? 'Selected' : 'NotSelected' " >Tareas finalizadas</a>
+    </div>
+    <router-outlet></router-outlet>
+</div>
