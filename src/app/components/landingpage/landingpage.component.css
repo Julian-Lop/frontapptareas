@@ -14,7 +14,7 @@
     margin-top: 150px;
     margin-left: 25%;
     margin-right: 25%;
-    background: rgba(48, 220, 255, 0.2);
+    background: white;
     box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.1);
     border-radius: 20px;
     border: 1px rgba(255,255,255,0.5) solid;
@@ -28,7 +28,7 @@
     margin: 0;
     padding: 0;
     width: 100%;
-    color: white;
+    color: whitesmoke;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
