@@ -1,18 +1,36 @@
 .Task{
     background: #f3f3f3;
-    width: 200px;
-    height: 350px;
+    width: 230px;
+    height: 360px;
     margin: 15px;
     border-radius: 10px;
     padding: 10px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.Task button{
-    position: absolute;
-    margin-left: 175px;
-    margin-top: 4px;
+.Task .ContainerButtons {
+    display: flex;
+    flex-direction: row;
+}
+
+.Task .ContainerButtons button{
+    height: 30px;
+    width: 80px;
+    margin-left: 10px;
+    margin-right: 10px;
+    background: none;
+    border: 2px #001b48 solid;
+    border-radius: 5px;
+    color: #001b48;
+    transition: 0.3s;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     cursor: pointer;
+}
+
+.Task .ContainerButtons button:hover{
+    border: 2px #d6e8ee solid;
+    color: #d6e8ee;
+    transition: 0.3s;
 }
 
 .Task h3{

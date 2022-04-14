@@ -16,4 +16,17 @@ export class TareasService {
     return this.http.get<any>(`${environment.url}obtenerTareas/${id}`)
   }
 
+  createTask(task:object):Observable<any>{
+    let temp = this.http.post<any>(`${environment.url}crearTarea`,task)
+    return temp
+  }
+
+
+  deleteTask(idTask:number):Observable<any>{
+    return this.http.delete<any>(`${environment.url}eliminarTarea/${idTask}`)
+  }
+
+  editTask(taskedit:object):Observable<any>{
+    return this.http.put(`${environment.url}editarTarea`,taskedit)
+  }
 }
