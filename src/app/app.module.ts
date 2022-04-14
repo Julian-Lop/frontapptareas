@@ -14,6 +14,7 @@ import { DropdownComponent } from './privateRoutes/components/dropdown/dropdown.
 import { CompleteTasksComponent } from './privateRoutes/components/complete-tasks/complete-tasks.component';
 import { TaskComponent } from './privateRoutes/components/task/task.component';
 import { AddTaskComponent } from './privateRoutes/components/add-task/add-task.component';
+import { EditTaskComponent } from './privateRoutes/components/edit-task/edit-task.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { AddTaskComponent } from './privateRoutes/components/add-task/add-task.c
     DropdownComponent,
     CompleteTasksComponent,
     TaskComponent,
-    AddTaskComponent
+    AddTaskComponent,
+    EditTaskComponent
   ],
   imports: [
     BrowserModule,

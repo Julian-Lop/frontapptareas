@@ -1,5 +1,8 @@
 <div class="Task">
-    <button>X</button>
+    <div class="ContainerButtons">
+        <button (click)="deleteTask()">X</button>
+        <button (click)="editTask()">Editar</button>
+    </div>
     <br><br>
     <h3>{{currentTask.Titulo}}</h3>
     <br>
@@ -11,4 +14,5 @@
     <br>
     <p>Fecha finalización: {{currentTask.FechaFin}}</p>
     <br>
+    <input type="checkbox" [(ngModel)]="complete" (ngModelChange)="completeTask()"><label>Completada</label>
 </div>
