@@ -1,4 +1,4 @@
-.Task{
+.TaskCompleted{
     background: #f3f3f3;
     width: 230px;
     height: 360px;
@@ -8,12 +8,12 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.Task .ContainerButtons {
+.TaskCompleted .ContainerButtons {
     display: flex;
     flex-direction: row;
 }
 
-.Task .ContainerButtons button{
+.TaskCompleted .ContainerButtons button{
     height: 30px;
     width: 80px;
     margin-left: 20px;
@@ -27,17 +27,17 @@
     cursor: pointer;
 }
 
-.Task .ContainerButtons button:hover{
+.TaskCompleted .ContainerButtons button:hover{
     border: 2px #d6e8ee solid;
     color: #d6e8ee;
     transition: 0.3s;
 }
 
-.Task h3{
+.TaskCompleted h3{
     margin: 0px;
 }
 
-.Task p{
+.TaskCompleted p{
     font-size: 12px;
 }
 

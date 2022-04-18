@@ -1,19 +1,19 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { TareasService } from 'src/app/services/tareas.service';
-import { TasksComponent } from '../tasks/tasks.component';
+import { CompleteTasksComponent } from '../complete-tasks/complete-tasks.component';
 
 @Component({
-  selector: 'app-task',
-  templateUrl: './task.component.html',
-  styleUrls: ['./task.component.css']
+  selector: 'app-task-completed',
+  templateUrl: './task-completed.component.html',
+  styleUrls: ['./task-completed.component.css']
 })
-export class TaskComponent implements OnInit {
+export class TaskCompletedComponent implements OnInit {
 
   @Input() currentTask: any = {}
 
-  complete:any = false
+  complete:any = true
 
-  constructor(private taskservice:TareasService, private tasks:TasksComponent) { }
+  constructor(private taskservice:TareasService, private tasks:CompleteTasksComponent) { }
 
   ngOnInit(): void {
   }
@@ -25,10 +25,6 @@ export class TaskComponent implements OnInit {
     })
   }
 
-  editTask(){
-    this.tasks.showModalEdit(this.currentTask)
-  }
-
   completeTask(){
     let taskCompleted = {
       id:this.currentTask.id,
@@ -36,9 +32,8 @@ export class TaskComponent implements OnInit {
       Descripcion:this.currentTask.Descripcion,
       FechaIni:this.currentTask.FechaIni,
       FechaFin:this.currentTask.FechaFin,
-      EstadoId: this.complete ? 2 : this.currentTask.EstadoId,
+      EstadoId: !this.complete ? 1 : this.currentTask.EstadoId,
     }
     this.taskservice.editTask(taskCompleted).subscribe(e => {alert(e.message); this.tasks.getTasks()})
   }
-
 }

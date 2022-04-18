@@ -1,1 +1,5 @@
-<p>complete-tasks works!</p>
+<div class="ContainerCompletedTasks">
+    <app-task-completed *ngFor="let task of tasks" [currentTask]="task" ></app-task-completed>
+    <app-add-task *ngIf="modal" ></app-add-task>
+    <app-edit-task  *ngIf="modaledit" [task]="dataEditTask" ></app-edit-task>
+</div>
