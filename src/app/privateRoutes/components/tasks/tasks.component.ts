@@ -22,7 +22,7 @@ export class TasksComponent implements OnInit {
 
   getTasks(){
     let user = this.auth.getDataUser()
-    this.taskservice.getTareas(user.id).subscribe(res => this.tasks = res.tareas)
+    this.taskservice.getTareas(user.id).subscribe(res => this.tasks = res.tareas.filter((e:any) => e.EstadoId != 2))
   }
 
   showModalAddTask(){

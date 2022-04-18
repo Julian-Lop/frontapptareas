@@ -15,6 +15,8 @@ import { CompleteTasksComponent } from './privateRoutes/components/complete-task
 import { TaskComponent } from './privateRoutes/components/task/task.component';
 import { AddTaskComponent } from './privateRoutes/components/add-task/add-task.component';
 import { EditTaskComponent } from './privateRoutes/components/edit-task/edit-task.component';
+import { TaskCompletedComponent } from './privateRoutes/components/task-completed/task-completed.component';
+import { AddSubtareaComponent } from './privateRoutes/components/add-subtarea/add-subtarea.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,9 @@ import { EditTaskComponent } from './privateRoutes/components/edit-task/edit-tas
     CompleteTasksComponent,
     TaskComponent,
     AddTaskComponent,
-    EditTaskComponent
+    EditTaskComponent,
+    TaskCompletedComponent,
+    AddSubtareaComponent
   ],
   imports: [
     BrowserModule,
