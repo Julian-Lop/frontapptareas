@@ -1,0 +1,10 @@
+<div class="EditSubtask">
+    <form (ngSubmit)="onSubmit()">
+    <div class="ButtonContainer">
+        <button type="submit"><i class="fas fa-check"></i></button>
+        <button (click)="exitEdit()"><i class="fas fa-backspace"></i></button>
+    </div>
+    <input type="text" name="Titulo" [(ngModel)]="Titulo">
+    <textarea name="" id="" cols="20" rows="10" name="Descripcion"  [(ngModel)]="Descripcion"></textarea>
+    </form>
+</div>

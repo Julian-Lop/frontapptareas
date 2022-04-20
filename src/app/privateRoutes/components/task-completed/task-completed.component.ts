@@ -12,6 +12,7 @@ export class TaskCompletedComponent implements OnInit {
   @Input() currentTask: any = {}
 
   complete:any = true
+  showSubtasks:boolean=false
 
   constructor(private taskservice:TareasService, private tasks:CompleteTasksComponent) { }
 
@@ -34,6 +35,19 @@ export class TaskCompletedComponent implements OnInit {
       FechaFin:this.currentTask.FechaFin,
       EstadoId: !this.complete ? 1 : this.currentTask.EstadoId,
     }
+    this.currentTask.Subtareas.map((subtask:any) => {
+      let newSubtask = {
+        id: subtask.id,
+        Titulo: subtask.Titulo,
+        Descripcion: subtask.Descripcion,
+        EstadoId: this.complete ? 2 : 1
+      }
+      this.taskservice.editSubtask(newSubtask).subscribe()
+    })
     this.taskservice.editTask(taskCompleted).subscribe(e => {alert(e.message); this.tasks.getTasks()})
+  }
+
+  dropSubtasks(){
+    this.showSubtasks = this.showSubtasks ? false : true
   }
 }

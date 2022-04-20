@@ -12,6 +12,7 @@ export class TasksComponent implements OnInit {
   tasks:any = []
   modal:boolean=false
   modaledit:boolean=false
+  modalAddSubtarea:boolean=false
   dataEditTask:object={}
 
   constructor(private taskservice:TareasService, private auth:AuthService) { }
@@ -22,7 +23,7 @@ export class TasksComponent implements OnInit {
 
   getTasks(){
     let user = this.auth.getDataUser()
-    this.taskservice.getTareas(user.id).subscribe(res => this.tasks = res.tareas.filter((e:any) => e.EstadoId != 2))
+    this.taskservice.getTareas(user.id).subscribe(res => this.tasks = res.tareas.filter((e:any) => e.EstadoId != 2).sort((a:any,b:any) => a.id-b.id))
   }
 
   showModalAddTask(){
@@ -34,6 +35,12 @@ export class TasksComponent implements OnInit {
     this.dataEditTask = datatask
     this.getTasks()
     this.modaledit = this.modaledit ? false : true
+  }
+
+  showModalAddSubtarea(datatask:any){
+    this.dataEditTask = datatask
+    this.getTasks()
+    this.modalAddSubtarea = this.modalAddSubtarea ? false : true
   }
 
 }

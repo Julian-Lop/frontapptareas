@@ -9,17 +9,23 @@ import { AuthService } from 'src/app/services/auth.service';
 })
 export class NavbarComponent implements OnInit {
 
-  sesion:any = localStorage.getItem('token')
+  sesion:any = localStorage.getItem('token') ? true : false
 
   constructor(private router:Router, private auth:AuthService) { }
 
   ngOnInit(): void {
-    this.auth.dispatchData.subscribe(data => this.sesion=data)
+    this.isVerified()
+    this.auth.dispatchData.subscribe(data => this.sesion=data?true:false)
+  }
+
+  async isVerified(){
+    let temp = await this.auth.hasSession()
+    this.sesion = temp
   }
 
   signOut(){
     localStorage.removeItem('token')
-    this.sesion = localStorage.getItem('token')
+    this.sesion = !localStorage.getItem('token')?false : true
     this.router.navigate(['/'])
   }
 

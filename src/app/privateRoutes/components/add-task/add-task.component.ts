@@ -38,7 +38,7 @@ export class AddTaskComponent implements OnInit {
       this.FechaFin = ''
     }
   }
-
+  
   exitModal(){
     this.tasks.showModalAddTask()
   }
