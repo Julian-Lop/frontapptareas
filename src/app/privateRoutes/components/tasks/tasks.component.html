@@ -3,4 +3,5 @@
     <div class="CardAdd" *ngIf="!modal" ><i class="fas fa-plus" (click)="showModalAddTask()"></i></div>
     <app-add-task *ngIf="modal" ></app-add-task>
     <app-edit-task  *ngIf="modaledit" [task]="dataEditTask" ></app-edit-task>
+    <app-add-subtarea *ngIf="modalAddSubtarea" [currentTask]="dataEditTask"></app-add-subtarea>
 </div>

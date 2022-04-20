@@ -1,0 +1,144 @@
+.Subtask{
+    background: white;
+    border-radius: 5px;
+    margin-top: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.3);
+    animation: drop;
+    animation-duration: 0.5s;
+}
+
+.Subtask .Description{
+    width: 100%;
+    margin-top: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.Subtask .ButtonContainer{
+    width: 60px;
+    margin-top: 5px;
+    margin-left: 170px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.Subtask .ButtonContainer button{
+    cursor: pointer;
+    background: none;
+    border: 1px black solid;
+    border-radius: 2px;
+}
+
+.Subtask .ButtonContainer button:hover{
+    cursor: pointer;
+    background: black;
+    border-radius: 2px;
+    color: white;
+    transition: 0.3s;
+}
+
+.Subtask input{
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.Subtask h4{
+    width: 80%;
+    margin-top: 5px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    font-size: 15px;
+}
+
+.Subtask p{
+    width: 90%;
+    font-size: 12px;
+}
+
+@keyframes drop {
+    0%{
+        opacity: 0;
+        transform: translateY(-10%);   
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0%);}
+}
+
+.CompletedSubtask{
+    background: white;
+    border-radius: 5px;
+    margin-top: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.3);
+    animation: drop;
+    animation-duration: 0.5s;
+    color: #cccc;
+}
+
+.CompletedSubtask .Description{
+    width: 100%;
+    margin-top: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.CompletedSubtask .ButtonContainer{
+    width: 60px;
+    margin-top: 5px;
+    margin-left: 170px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.CompletedSubtask .ButtonContainer button{
+    cursor: pointer;
+    background: none;
+    border: 1px black solid;
+    border-radius: 2px;
+}
+
+.CompletedSubtask .ButtonContainer button:hover{
+    cursor: pointer;
+    background: black;
+    border-radius: 2px;
+    color: white;
+    transition: 0.3s;
+}
+
+.CompletedSubtask input{
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.CompletedSubtask h4{
+    width: 80%;
+    margin-top: 5px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    font-size: 15px;
+}
+
+.CompletedSubtask p{
+    width: 90%;
+    font-size: 12px;
+}

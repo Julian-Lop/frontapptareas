@@ -9,7 +9,7 @@ import { AsyncValidatorFn } from '@angular/forms';
 })
 export class AuthService {
 
-  session : any = {}
+  session : any = null
   response : any
 
   @Output() dispatchData : EventEmitter<any> = new EventEmitter()

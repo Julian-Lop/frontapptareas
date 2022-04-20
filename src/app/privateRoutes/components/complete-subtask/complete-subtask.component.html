@@ -1,0 +1,9 @@
+<div class="CompleteSubtask" *ngIf="!showEditSubtask">
+    <div class="ButtonContainer">
+        <button (click)="deleteSubtask()"><i class="fas fa-trash"></i></button>
+    </div>
+        <h4 [style.color]="complete ? '#cccc':'Black'">{{currentSubtask.Titulo}}</h4>
+    <div class="Description"><p [style.color]="complete ? '#cccc':'Black'">{{currentSubtask.Descripcion}}</p></div>
+</div>
+<app-edit-subtask *ngIf="showEditSubtask" [currentSubtask]="currentSubtask"></app-edit-subtask>
+

@@ -1,19 +1,28 @@
 <div class="TaskCompleted">
     <div class="ContainerButtons">
-        <button (click)="deleteTask()">X</button>
+        <button (click)="deleteTask()"><i class="fas fa-trash"></i></button>
     </div>
-    <br><br>
+  
     <h3>{{currentTask.Titulo}}</h3>
-    <br>
+    
     <p>{{currentTask.Descripcion}}</p>
-    <br>
-    <p>{{currentTask.Estado.Nombre.includes('Proceso') ? 'En '+currentTask.Estado.Nombre : currentTask.Estado.Nombre}}</p>
-    <br>
+    <hr>
+    <p [style.color]="currentTask.Estado.Nombre.includes('Proceso') ? 'Blue' : 'Green' ">{{currentTask.Estado.Nombre.includes('Proceso') ? 'En '+currentTask.Estado.Nombre : currentTask.Estado.Nombre}}</p>
+  
     <p>Fecha de inicio: {{currentTask.FechaIni}}</p>
-    <br>
+
     <p>Fecha finalización: {{currentTask.FechaFin}}</p>
-    <br>
+    
     <div class="Completed">
         <input type="checkbox" [(ngModel)]="complete" (ngModelChange)="completeTask()"><label>Completada</label>
+    </div>
+    <hr>
+    <div *ngIf="currentTask.Subtareas.length > 0" class="DropSubtasks" (click)="dropSubtasks()">
+        <h4> Hay {{currentTask.Subtareas.length}} subtareas</h4> 
+        <i class="fas fa-caret-down" *ngIf="!showSubtasks"></i>
+        <i class="fas fa-caret-up" *ngIf="showSubtasks"></i>
+    </div>
+    <div *ngIf="showSubtasks">
+        <app-complete-subtask *ngFor="let subtask of currentTask.Subtareas"  [currentSubtask]="subtask"></app-complete-subtask>
     </div>
 </div>

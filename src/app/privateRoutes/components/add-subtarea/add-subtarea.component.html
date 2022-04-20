@@ -1,1 +1,13 @@
-<p>add-subtarea works!</p>
+<div class="AddSubtarea">
+    <form action="" (ngSubmit)="onSubmit()">
+        <h2>Añadir subtarea</h2>
+        <label>Agreaga un título</label>
+        <input type="text" class="" name="Titulo" placeholder="Titulo" [(ngModel)]="Titulo">
+
+        <label>Agrega una breve descripción de la tarea</label>
+        <textarea name="" id="" cols="20" rows="10" name="Descripcion" [(ngModel)]="Descripcion" ></textarea>
+
+        <button type="submit"><i class="fas fa-check"></i></button>
+        <button (click)="exitModal()" ><i class="fas fa-backspace"></i></button>
+    </form>
+</div>

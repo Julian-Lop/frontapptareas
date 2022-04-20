@@ -1,0 +1,9 @@
+<div *ngIf="!showEditSubtask" [ngClass]="{'Subtask': !complete, 'CompletedSubtask':complete}" >
+    <div class="ButtonContainer">
+        <button (click)="editSubtask()"><i class="fas fa-pen"></i></button>
+        <button (click)="deleteSubtask()"><i class="fas fa-trash"></i></button>
+    </div>
+        <h4>{{currentSubtask.Titulo}}</h4>
+    <div class="Description"><input type="checkbox" [(ngModel)]="complete" (ngModelChange)="completeTask()"><p>{{currentSubtask.Descripcion}}</p></div>
+</div>
+<app-edit-subtask *ngIf="showEditSubtask" [currentSubtask]="currentSubtask"></app-edit-subtask>
